@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Glassmorphism login Form Tutorial in html css</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <h3>Login Here</h3>
+
+      <label for="email">Email</label>
+      <input
+        type="text"
+        placeholder="Enter your email"
+        id="username"
+        [(ngModel)]="email"
+        name="email"
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        [(ngModel)]="password"
+        name="password"
+        id="password"
+      />
+
+      <button type="submit" class="text-black">Log In</button>
+      <p class="text-light mt-2">
+        Don't have an account?
+        <a routerLink="/sign-up" class="text-success">Sign Up</a>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E-Ticket Hub</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto d-flex" id="navbarText">
+      <ul class="navbar-nav mb-2 mb-lg-0 w-100">
+        <li class="nav-item">
+          <a
+            routerLink="home"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Home</a
+          >
+        </li>
+
+        <li class="ms-auto d-flex">
+          <ng-container *ngIf="!isLoggedIn">
+            <a routerLink="/sign-in" class="nav-link text-white">Sign In</a>
+            <a routerLink="/sign-up" class="nav-link text-white">Sign Up</a>
+          </ng-container>
+          <ng-container *ngIf="isLoggedIn">
+            <a
+              class="nav-link text-white"
+              routerLink="home"
+              (click)="onLogout()"
+              >Log Out</a
+            >
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <img src="assets/img/home.jpg" alt="" data-aos="fade-in" />
+
+    <div class="container">
+      <div
+        class="row justify-content-center text-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="col-xl-6 col-lg-8">
+          <h2>Get Your E-Tickets Instantly<span>!</span></h2>
+          <p>Book tickets to your favorite events with ease</p>
+        </div>
+      </div>
+
+      <div
+        class="row gy-4 mt-5 justify-content-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-box">
+            <i class="bi bi-music-note-beamed"></i>
+            <h3><a href="">Concerts</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon-box">
+            <i class="bi bi-ticket-perforated"></i>
+            <h3><a href="">Theater</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon-box">
+            <i class="bi bi-trophy"></i>
+            <h3><a href="">Sports</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Hero Section -->
+
+  <!-- Features Section -->
+  <section id="features" class="features section">
+    <div class="container">
+      <div class="row gy-4">
+        <div
+          class="features-image col-lg-6"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img src="assets/img/ticket.jpg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <div
+            class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <i class="bi bi-person-hearts"></i>
+            <div>
+              <h4>Easy Booking</h4>
+              <p>
+                Find and book tickets for concerts, plays, festivals, and more
+                in just a few clicks.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="features-item d-flex mt-5 ps-0 ps-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <i class="bi bi-chat-heart"></i>
+            <div>
+              <h4>Verified Reviews</h4>
+              <p>
+                Read real reviews from attendees before booking your next event.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="features-item d-flex mt-5 ps-0 ps-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <i class="bi bi-shield-check"></i>
+            <div>
+              <h4>Secure Payments</h4>
+              <p>
+                Purchase your tickets safely with our encrypted and trusted
+                payment system.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="features-item d-flex mt-5 ps-0 ps-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <i class="bi bi-phone-flip"></i>
+            <div>
+              <h4>Mobile Tickets</h4>
+              <p>
+                Receive your e-ticket instantly via email or your mobile
+                wallet—no printing required!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Features Section -->
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Our Categories</h2>
+      <p>Explore and Book Events</p>
+    </div>
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-music-note-beamed"></i>
+            </div>
+            <a routerLink="/events/concerts" class="stretched-link">
+              <h3>Concert Tickets</h3>
+            </a>
+            <p>
+              Experience live music from your favorite artists—grab your tickets
+              before they sell out!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-ticket-perforated"></i>
+            </div>
+            <a routerLink="/events/theater" class="stretched-link">
+              <h3>Theater & Shows</h3>
+            </a>
+            <p>
+              Discover local performances and world-class shows—book your seat
+              today!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-trophy"></i>
+            </div>
+            <a routerLink="/events/sports" class="stretched-link">
+              <h3>Sports Events</h3>
+            </a>
+            <p>
+              Don’t miss the thrill—secure your tickets to live sports games
+              now.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Services Section -->
+
+  <!-- Call To Action Section -->
+  <section id="call-to-action" class="call-to-action section dark-background">
+    <img
+      src="assets/img/rev.jpeg"
+      alt="Call to Action Background"
+      class="img-fluid"
+    />
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section dark-background">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Testimonial Item 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-item">
+              <img
+                src="assets/img/testimonials/testimonials-1.jpg"
+                class="testimonial-img"
+                alt="John Doe"
+              />
+              <h3>John Doe</h3>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span
+                  >Getting tickets to my favorite concert was effortless! I got
+                  the QR code right in my inbox.</span
+                >
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial Item 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img
+                src="assets/img/testimonials/testimonials-2.jpg"
+                class="testimonial-img"
+                alt="Jane Smith"
+              />
+              <h3>Jane Smith</h3>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span
+                  >I love how fast and secure the booking process is. No stress,
+                  just tap and go!</span
+                >
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more testimonials as needed -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Scroll Top -->
+<!-- Scroll Top -->
+<a
+  href="#"
+  id="scroll-top"
+  class="scroll-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
