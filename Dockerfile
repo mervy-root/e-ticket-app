@@ -16,7 +16,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy build output to Nginx folder
-COPY --from=build /app/docs /usr/share/nginx/html
+COPY --from=build /app/dist/frontend /usr/share/nginx/html
 
 # Optional: Copy custom nginx config (if needed)
 # COPY nginx.conf /etc/nginx/nginx.conf
