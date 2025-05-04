@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-RUN npm run build -- --output-path=docs --configuration production
+RUN npm run build --configuration production
 
 # Stage 2: Serve the app using Nginx
 FROM nginx:alpine
