@@ -14,7 +14,7 @@ FROM nginx:alpine
 
 # Remove default Nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
-
+ 
 # Copy build output to Nginx folder
 COPY --from=build /app/dist/frontend /usr/share/nginx/html
 
